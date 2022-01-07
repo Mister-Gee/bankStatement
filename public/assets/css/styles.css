@@ -2,3 +2,119 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    font-family: 'Hind', sans-serif !important;
+    background: #1E1E1E29 0% 0% no-repeat padding-box !important; 
+    opacity: 1;
+    max-width: 2400px;
+    width: 100%;
+    padding: 9px 176px;
+}
+
+/*Header*/
+
+header, 
+.header-dropdowns,  
+.btn-selection {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.btn-selection{
+    /* width: 110%; */
+}
+
+.header-title h3{
+    font: normal normal 600 24px/38px Hind;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+    opacity: 1;
+}
+
+.header-dropdowns .primary-dropdown{
+    margin-left: 15px;
+}
+
+.dropdown .dropdown-menu a {
+    font: normal normal normal 14px/23px Hind;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+    opacity: 1;
+}
+
+.disabled-dropdown .dropdown button{
+    background-color: transparent !important;
+    border: 1px solid #1E1E1E;
+    border-radius: 4px;
+    opacity: 0.5;
+    text-align: center;
+    font: normal normal medium 14px/24px Hind;
+    letter-spacing: 0px;
+    color: #1E1E1E;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.primary-dropdown .dropdown button, .btn-selection{
+    background-color: transparent !important;
+    border: 1px solid #1E1E1E;
+    border-radius: 4px;
+    opacity: 1;
+    text-align: center;
+    font: normal normal medium 14px/24px Hind;
+    letter-spacing: 0px;
+    color: #1E1E1E !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px; 
+}
+
+.primary-dropdown .show button{
+    background-color: #1E1E1E !important;
+    color: #FFFFFF;
+}
+
+.secondary-dropdown .dropdown button{
+    background-color: #1E1E1E !important;
+
+    border: 1px solid #1E1E1E;
+    border-radius: 4px;
+    opacity: 1;
+    text-align: center;
+    font: normal normal medium 14px/24px Hind;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px; 
+    margin-left: 15px;
+}
+
+.secondary-dropdown .show button{
+    background-color: transparent !important;
+    color: #1E1E1E !important;
+}
+
+/*Empty Bank Statement Component*/
+.no-statement-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.no-statement-section p{
+    width: 300px;
+    text-align: center;
+    font: normal normal normal 16px/24px Hind;
+    letter-spacing: 0px;
+    color: #707070;
+}
