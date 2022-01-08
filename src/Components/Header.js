@@ -1,12 +1,14 @@
 import { Dropdown, Form  } from "react-bootstrap"
 
-const Header = () => {
+const Header = ({handleSingleUploadModal, handleMultipleUploadModal, statementCount}) => {
     return (
         <header>
            <div className="header-title">
                 <h3>Bank Statements</h3>
            </div>
            <div className="header-dropdowns">
+                {statementCount > 0 &&
+                <>
                 <div className="disabled-dropdown">
                     <Dropdown >
                         <Dropdown.Toggle variant="secondary" disabled>
@@ -22,19 +24,29 @@ const Header = () => {
                 <div className="primary-dropdown">
                     <button className="btn btn-secondary btn-selection">
                         {/* <button.Toggle variant="secondary" className="btn-selection"> */}
-                            <Form.Check aria-label="option 1" />  <span>Mark For Selection</span>
+                            <Form.Check aria-label="option 1" />  <span >Mark For Selection</span>
                         {/* </button.Toggle> */}
                     </button>
                 </div>
+                </>
+                }
                 <div className="secondary-dropdown">
                     <Dropdown>
                         <Dropdown.Toggle variant="secondary">
-                        Upload Bank Statement
+                            Upload Bank Statement
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item >Single Upload</Dropdown.Item>
-                            <Dropdown.Item >Multiple Upload</Dropdown.Item>
+                            <Dropdown.Item 
+                                onClick={() => handleSingleUploadModal(true)}
+                            >
+                                Single Upload
+                            </Dropdown.Item>
+                            <Dropdown.Item 
+                                onClick={() => handleMultipleUploadModal(true)}
+                            >
+                                Multiple Upload
+                            </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
